@@ -29,6 +29,7 @@ class RestInPlaceEditor
       .html(@oldValue)
       .removeClass('rip-active')
       .click(@clickHandler)
+    @$element.trigger('after-abort.rest-in-place')
   
   # Take the changes a user has made and send them to the server.
   # If the server accepted the request but does not send back a
